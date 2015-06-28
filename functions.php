@@ -1,5 +1,18 @@
 <?php
 
+/* Register custom menu */
+function register_my_menus() {
+    register_nav_menus(
+    array(
+        'header-menu' => __( 'Header Menu' ),
+        'second-level-menu' => __( 'Second Level Menu' ))
+    );
+}
+
+add_action( 'init', 'register_my_menus' );
+
+/* Add support to meta boxes plug in by define the extra fields */
+
 add_filter( 'rwmb_meta_boxes', 'hslt_register_meta_boxes' );
 
 function hslt_register_meta_boxes( $meta_boxes )
@@ -29,4 +42,3 @@ function hslt_register_meta_boxes( $meta_boxes )
 
     return $meta_boxes;
 }
-?>

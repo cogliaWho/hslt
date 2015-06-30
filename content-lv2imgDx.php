@@ -1,6 +1,6 @@
 <?php
  /*
- Template Name: livello 1
+ Template Name: livello 2 - Immagine a destra
  */
  ?>
 

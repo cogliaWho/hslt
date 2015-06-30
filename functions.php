@@ -21,21 +21,38 @@ function hslt_register_meta_boxes( $meta_boxes )
 
     // 1st meta box
     $meta_boxes[] = array(
-        'id'       => 'test',
-        'title'    => 'Personal Information',
-        'pages'    => array( 'post', 'page' ),
+        'id'       => 'ImgText',
+        'title'    => 'Testo Immagine',
+        'pages'    => array( 'page' ),
         'context'  => 'normal',
         'priority' => 'high',
 
         'fields' => array(
             array(
-                'name'  => 'Testo Pagina',
-                'desc'  => 'Format: First Last',
-                'id'    => $prefix . 'fname',
-                'type'  => 'textarea',
+                'name'  => 'Testo Immagine',
+                'desc'  => 'Testo che compare al di sotto delle immagine nei template di primo e secondo livello',
+                'id'    => $prefix . 'testoImg',
+                'type'  => 'wysiwyg',
                 'std'   => 'Anh Tran',
                 'class' => 'custom-class',
-                'clone' => true,
+                'clone' => true
+            ),
+        )
+    );
+
+    // 2nd meta box
+    $meta_boxes[] = array(
+        'title'    => 'Extra Links',
+        'pages'    => array( 'page' ),
+        'fields' => array(
+            array(
+                'name'  => 'Link extra',
+                'desc'  => 'Link che compare in alto a destra nelle pagine di primo e secondo livello (es: statuto)',
+                'id'    => $prefix . 'linkExtra',
+                'type'  => 'wysiwyg',
+                'std'   => 'Anh Tran',
+                'class' => 'custom-class',
+                'clone' => true
             ),
         )
     );

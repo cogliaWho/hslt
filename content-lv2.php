@@ -1,6 +1,6 @@
 <?php
  /*
- Template Name: livello 1
+ Template Name: livello 2 - Immagine a destra
  */
  ?>
 
@@ -12,21 +12,8 @@
 
       <div class="other-links">
         <ul>
-          <!--<li><a href="#">bilancio</a></li>
-          <li><a href="#">statuto</a></li>-->
-          <?php
-            $extralinks = rwmb_meta( 'hslt_linkExtra' );
-
-            if (is_array($extralinks))
-            {
-                foreach ($extralinks as $value)
-                {
-                    echo '<li>'.$value.'</li>';
-                }
-            } else {
-              echo "Qualcosa è andato storto. Contatta l'amministratore.";
-            }
-          ?>
+          <li><a href="#">bilancio</a></li>
+          <li><a href="#">statuto</a></li>
         </ul>
       </div>
     </div>

@@ -1084,4 +1084,16 @@ body, html {
   float: left;
   font-size: 1.3rem; }
 
+/* HOME PAGE */
+.bg-image-full {
+  width: 100%;
+  height: 89%;
+  background-size: contain; }
+
+/* FOOTER */
+.site-footer {
+  width: 100%;
+  height: 11%;
+  background-color: #fe5246; }
+
 /*# sourceMappingURL=hslt.css.map */

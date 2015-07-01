@@ -5,7 +5,7 @@ function register_my_menus() {
     register_nav_menus(
     array(
         'header-menu' => __( 'Header Menu' ),
-        'second-level-menu' => __( 'Second Level Menu' ))
+        'header-top-navigation' => __( 'Header Top Navigation' ))
     );
 }
 

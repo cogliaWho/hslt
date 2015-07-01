@@ -48,6 +48,9 @@
           <li><div class="searchBar"></div></li>
         </ul>
       </div>
+      <!--
+      <?php wp_nav_menu(  array( 'theme_location' => 'header-top-navigation' ));  ?>
+    -->
       <?php wp_nav_menu(  array( 'theme_location' => 'header-menu' ));  ?>
     </div>
   </div>

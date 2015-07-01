@@ -8,7 +8,19 @@
 
   <main id="primary" class="content-area" role="main">
     <div class="second-level-navigation">
-      <?php wp_nav_menu(  array( 'theme_location' => 'second-level-menu' ));  ?>
+      <?php
+        if($post->post_parent)
+          $children = wp_list_pages("sort_column=menu_order&title_li=&child_of=".$post->post_parent."&echo=0");
+        else
+          $children = wp_list_pages("sort_column=menu_order&title_li=&child_of=".$post->ID."&echo=0");
+        if ($children) {
+      ?>
+      <div class="menu-secondo-livello-container">
+        <ul id="menu-secondo-livello" class="menu">
+          <?php echo $children; ?>
+        </ul>
+      </div>
+      <?php } ?>
 
       <div class="other-links">
         <ul>

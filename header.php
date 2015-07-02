@@ -38,19 +38,11 @@
     </div>
     <div class="header-navigation">
       <div class="header-top-navigation">
-        <ul id="header-top-nav">
-          <li><div class="social-icon"></div></li>
-          <li><div class="social-icon"></div></li>
-          <li><a href="#">news</a></li>
-          <li><a href="#">contatti</a></li>
-          <li><a href="#">registrati</a></li>
-          <li><a href="#">login</a></li>
-          <li><div class="searchBar"></div></li>
-        </ul>
+        <div class="social-icon"></div>
+        <div class="social-icon"></div>
+        <?php wp_nav_menu(  array( 'theme_location' => 'header-top-navigation' ));  ?>
+        <div class="searchBar"></div>
       </div>
-      <!--
-      <?php wp_nav_menu(  array( 'theme_location' => 'header-top-navigation' ));  ?>
-    -->
       <?php wp_nav_menu(  array( 'theme_location' => 'header-menu' ));  ?>
     </div>
   </div>

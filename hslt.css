@@ -903,9 +903,35 @@ body, html {
   width: 50%;
   height: 50%;
   float: right;
-  margin-right: 15px; }
+  margin-right: 15px;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  align-items: center;
+  justify-content: space-around; }
+  .header-top-navigation .social-icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: #b1c727; }
+  .header-top-navigation .searchBar {
+    height: 10px;
+    width: 75px;
+    background-color: white; }
 
-#header-top-nav {
+.menu-header-top-navigation-container {
+  width: 60%;
+  height: 100%;
+  margin-top: 5px; }
+
+#menu-header-top-navigation {
   width: 100%;
   height: 100%;
   list-style-type: none;
@@ -921,25 +947,15 @@ body, html {
   /* NEW - Chrome */
   display: flex;
   /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  align-items: flex-start;
   justify-content: space-around; }
-  #header-top-nav li {
+  #menu-header-top-navigation li {
     text-align: center;
     font-size: .8rem;
     padding-top: 10px;
     color: #b1c727; }
-    #header-top-nav li a {
+    #menu-header-top-navigation li a {
       text-decoration: none;
       color: inherit; }
-  #header-top-nav .social-icon {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    background-color: #b1c727; }
-  #header-top-nav .searchBar {
-    height: 10px;
-    width: 75px;
-    background-color: white; }
 
 .menu-primo-livello-container {
   width: 100%;
@@ -1095,5 +1111,66 @@ body, html {
   width: 100%;
   height: 11%;
   background-color: #fe5246; }
+
+.footer-wrap {
+  position: relative;
+  width: 740px;
+  height: 100%;
+  margin: 0 auto;
+  padding-left: 2%;
+  padding-right: 2%;
+  box-sizing: border-box; }
+
+.menu-footer-menu-container {
+  width: 30%; }
+
+#menu-footer-menu {
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  align-items: baseline;
+  justify-content: space-around; }
+  #menu-footer-menu li {
+    text-align: center;
+    font-size: .8rem;
+    color: white;
+    background-color: #6a2b93;
+    padding: 1px; }
+    #menu-footer-menu li a {
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: inherit; }
+  #menu-footer-menu li:hover {
+    background-color: transparent; }
+
+.footer-info {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  color: black;
+  font-size: .6rem; }
+
+.footer-dona-btn {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  right: 0px;
+  top: -50px;
+  background-size: contain;
+  background-repeat: no-repeat; }
 
 /*# sourceMappingURL=hslt.css.map */

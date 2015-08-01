@@ -19,32 +19,36 @@
 
 <body <?php body_class(); ?>>
 
+<!-- get the logo image from the library  -->
 <?php
-  $headerClass = 'header-home';
-  if(!is_front_page() && !is_home()):
-    $headerClass = '';
-  else:
-    $headerClass = 'header-home';
-  endif;
-?>
+global $wpdb;
+$query = "SELECT ID FROM {$wpdb->prefix}posts WHERE post_name LIKE 'headerLogo' AND post_type LIKE 'attachment'";
+$thumb_id = $wpdb->get_var($query);
+if( !is_null($thumb_id) ) {
+    $attachment = wp_get_attachment_image_src($thumb_id, 'full');
+    $img_url = $attachment[0];
+}
+ ?>
 
-
-<header id="masthead" class="site-header <?php echo $headerClass ?>" role="banner">
+<header id="masthead" class="site-header" role="banner">
+  <div class="header-topBarColor"></div>
+  <div class="header-topBar">
+    <div class="center-column">
+      <?php wp_nav_menu(  array( 'theme_location' => 'header-top-navigation' ));  ?>
+    </div>
+  </div>
   <div class="header-wrap">
-    <div class="header-logo">
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-        <img src="<?php echo get_stylesheet_directory_uri() . "/images/logoTemp.jpg" ?>"/>
-      </a>
-    </div>
-    <div class="header-navigation">
-      <div class="header-top-navigation">
-        <div class="social-icon"></div>
-        <div class="social-icon"></div>
-        <?php wp_nav_menu(  array( 'theme_location' => 'header-top-navigation' ));  ?>
-        <div class="searchBar"></div>
+    <div class="header-top-navigation">
+      <div class="header-logo">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+          <img src="<?php echo $img_url ?>"/>
+        </a>
       </div>
-      <?php wp_nav_menu(  array( 'theme_location' => 'header-menu' ));  ?>
+      <div class="header-text">
+        <p>È ricercando l'impossibile che l'uomo ha sempre realizzato il possibile.</p>
+      </div>
     </div>
+      <?php wp_nav_menu(  array( 'theme_location' => 'header-menu' ));  ?>
   </div>
 </header>
 

@@ -6,91 +6,46 @@
 #page{
   width: 100%;
   height: 88%;
+  // background-color: #abc737;
 }
 
 #primary{
-  width: 740px;
+  width: 960px;
   margin: 0 auto;
   min-height: 100%;
   background-color: white;
   box-sizing: border-box;
-  padding-left: 2%;
-  padding-right: 2%;
 }
 
 // Header
 
 #masthead{
   width: 100%;
-  height: 12%;
+  height: 170px;
   background-color: #374466;
 }
-
-.header-home{
-  background-color: #3c8572!important;
+.header-topBarColor{
+  float: left;
+  width: 100%;
+  height: 10px;
+  background-image: url(images/headerTopLine.jpg);
 }
-
-.header-wrap{
-  width: 740px;
-  height: 100%;
+//Top bar links
+.center-column{
+  width: 960px;
   margin: 0 auto;
-  background-color: #3c8572;
-  padding-left: 2%;
   padding-right: 2%;
-  box-sizing: border-box;
 }
-
-.header-logo{
-  width: 10%;
-  height: 100%;
-  text-align: center;
+.header-topBar{
   float: left;
-
-  a{
-    height: 100%;
-    width: 100%;
-
-    img{
-        margin-top: 12px;
-        width: 100%;
-    }
-  }
+  width: 100%;
+  height: 30px;
+  background-color: #6369b2;
 }
-
-.header-navigation{
-  width: 90%;
-  height: 100%;
-  float: left;
-}
-
-.header-top-navigation{
-  width: 50%;
-  height: 50%;
-  float: right;
-  margin-right: 15px;
-
-  @include flexbox();
-  align-items: center;
-  justify-content: space-around;
-
-  .social-icon{
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    background-color: #b1c727;
-  }
-
-  .searchBar{
-    height: 10px;
-    width:  75px;
-    background-color: white;
-  }
-}
-
 .menu-header-top-navigation-container{
-  width: 60%;
+  width: 50%;
   height: 100%;
-  margin-top: 5px;
+  float: right;
 }
 
 #menu-header-top-navigation{
@@ -101,25 +56,83 @@
   padding: 0;
 
   @include flexbox();
-  justify-content: space-around;
+  @include flex-position(flex-end, flex-end);
 
   li{
     text-align: center;
     font-size: .8rem;
     padding-top: 10px;
-    color: #b1c727;
+    padding-right: 20px;
+    color: #FFFFFF;
 
     a{
       text-decoration: none;
       color: inherit;
     }
+
+    a:hover{
+      text-decoration: underline;
+    }
   }
+}
+//END Top bar links
+
+.header-wrap{
+  width: 960px;
+  height: 130px;
+  margin: 0 auto;
+  padding-right: 2%;
+  box-sizing: border-box;
+}
+
+
+.header-logo{
+  width: 35%;
+  height: 80%;
+  padding-right: 10px;
+  @include flexbox();
+  @include flex-position(center, flex-start);
+
+  a{
+    display: block;
+    width: 20%;
+    height: 100%;
+
+    img{
+        height: 100%;
+    }
+  }
+}
+
+.header-text{
+  width: 50%;
+  height: 100%;
+  color: #c08a53;
+  @include flexbox();
+  @include flex-position(center, flex-start);
+  p{
+    font-size: 120%;
+  }
+}
+
+.header-navigation{
+  width: 100%;
+  height: 50%;
+  float: left;
+}
+
+.header-top-navigation{
+  width: 100%;
+  height: 60%;
+
+  @include flexbox();
+  @include flex-position(center, space-between);
 }
 
 .menu-primo-livello-container{
   width: 100%;
   height: 40%;
-  // padding-left: 40px;
+  padding-left: 2%;
   float: left;
 }
 
@@ -131,12 +144,11 @@
   padding: 0;
 
   @include flexbox();
-  align-items: baseline;
-  justify-content: space-around;
+  @include flex-position(flex-end, space-between);
 
   li{
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     padding: 10px;
     color: white;
     a{
@@ -151,7 +163,6 @@
   li:hover{
     background-color: white;
     color: #374466;
-    border-radius: 15px 15px 0px 0px;
   }
 }
 
@@ -186,9 +197,8 @@
   padding: 0;
 
   @include flexbox();
-  align-items: flex-end;
-
-  flex-wrap: wrap;
+  @include flex-position(flex-end, flex-start);
+  @include flex-wrap(wrap);
 
   li{
     text-align: center;
@@ -222,8 +232,7 @@
     padding: 0;
 
     @include flexbox();
-    align-items: center;
-    justify-content: flex-end;
+    @include flex-position(center, flex-end);
 
     li{
       text-align: center;
@@ -277,26 +286,146 @@
   background-size: contain;
  }
 
+ .hp-boxes{
+  width: 100%;
+  height: 255px;
+  padding-bottom: 15px;
+ }
+
+ .hp-column{
+  float: left;
+  width: 310px;
+  height: 100%;
+ }
+
+ .hp-column:first-child{
+  margin-right: 15px;
+ }
+
+ .hp-column:last-child{
+  margin-left: 15px;
+ }
+
+ .hp-news-box{
+  width: 100%;
+  height: 120px;
+  background-color: #f3ede4;
+ }
+ .hp-news-box:first-child{
+  margin-bottom: 15px;
+ }
+
+.news-thumb{
+  float: left;
+  width: 38%;
+  height: 100%;
+  background-position: top left;
+  background-size: contain;
+}
+
+.news-content{
+  float: left;
+  width: 56%;
+  height: 82%;
+  padding-left: 6%;
+
+  overflow: hidden;
+  h2{
+    font-family: 'DecimaMonoBold', sans-serif;
+    color: #000000;
+    font-size: .9rem;
+    font-weight: bold;
+    word-wrap: break-word;
+    padding:5px;
+    padding-top: 20px;
+    padding-left: 0px;
+  }
+  p{
+    padding:5px;
+    padding-left: 0px;
+    color: #000000;
+    font-size: .8rem;
+    word-wrap: break-word;
+  }
+}
+
+ .hp-custom-box{
+  width: 100%;
+  height: 120px;
+  background-color: #6369b2;
+  cursor: pointer;
+ }
+ .hp-custom-box:first-child{
+  margin-bottom: 15px;
+  background-color: #ff5348;
+ }
+
+ .hp-dona-box{
+  width: 100%;
+  height: 135px;
+  background-color: #d7c6b0;
+  margin-bottom: 15px;
+ }
+
+ .hp-dona-thumb{
+  float: left;
+  width: 48%;
+  height: 100%;
+  text-align: center;
+  @include flexbox();
+  @include flex-position(center, center);
+ }
+
+ .hp-dona-links{
+  float: left;
+  width: 52%;
+  height: 100%;
+  text-align: center;
+  @include flexbox();
+  @include flex-position(flex-start, center);
+  @include flex-direction(column);
+
+  a{
+    font-family: 'DecimaMonoBold', sans-serif;
+    font-size: .9rem;
+    color: #000000;
+    border-bottom: 2px solid #6369b2;
+    text-decoration: none;
+  }
+ }
+
+ .hp-cinquepermille-box{
+  width: 100%;
+  height: 105px;
+  background-color: #85cc9d;
+  @include flexbox();
+  @include flex-position(center, center);
+
+  p{
+    text-align: center;
+    line-height: 1.3rem;
+  }
+
+  span{
+    font-family: 'DecimaMonoBold', sans-serif;
+    font-weight: bold;
+  }
+ }
+
 /* FOOTER */
 
 .site-footer{
-  width: 100%;
-  height: 11%;
-  background-color: #fe5246;
+  width: 960px;
+  margin: 0 auto;
+  border-top: 1px dashed #000000;
 }
 
 .footer-wrap{
   position: relative;
-  width: 740px;
-  height: 100%;
-  margin: 0 auto;
-  padding-left: 2%;
-  padding-right: 2%;
-  box-sizing: border-box;
-}
-
-.menu-footer-menu-container{
-  width: 30%;
+  width: 100%;
+  height: 60px;
+  @include flexbox();
+  @include flex-position(center, center);
 }
 
 #menu-footer-menu{
@@ -305,17 +434,17 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  padding-top: 10px;
+
   @include flexbox();
-  align-items: baseline;
-  justify-content: space-around;
+  @include flex-position(baseline, space-between);
 
   li{
     text-align: center;
-    font-size: .8rem;
+
     color: white;
-    background-color: #6a2b93;
+    background-color: #671e8f;
     padding: 1px;
+
     a{
       width: 100%;
       height: 100%;
@@ -324,25 +453,75 @@
     }
   }
 
+  li:first-child{
+    margin-right: 25px;
+  }
+
   li:hover{
     background-color: transparent;
+    color: #671e8f;
   }
 }
 
-.footer-info{
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  color: black;
-  font-size: .6rem;
+.footer-social-icon{
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+
+  img{
+    height: 100%;
+    width: 100%;
+  }
 }
 
-.footer-dona-btn{
-  width: 90px;
-  height: 90px;
-  position: absolute;
-  right: 0px;
-  top: -50px;
-  background-size: contain;
-  background-repeat: no-repeat;
+.footer-site-links{
+  border-top: 6px solid #d7c6b0;
+  border-bottom: 6px solid #d7c6b0;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  @include flexbox();
+  @include flex-position(baseline, space-between);
 }
+
+.footer-row{
+
+}
+
+.footer-info{
+  font-size: .8rem;
+  line-height: 1rem;
+  word-wrap: break-word;
+}
+
+.footer-link-list{
+  font-size: .9rem;
+  line-height: 1rem;
+  a{
+    color: #000000;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  a:hover{
+   text-decoration: underline;
+  }
+}
+
+.footer-copyright{
+  width: 100%;
+  padding-top:15px;
+  margin-bottom: 15px;
+  @include flexbox();
+  @include flex-position(center, center);
+  p{
+    text-align: center;
+
+  }
+  span{
+    font-size: 1.5rem;
+  }
+}
+
+// END FOOTER

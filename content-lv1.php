@@ -1,6 +1,6 @@
 <?php
  /*
- Template Name: livello 1
+ Template Name: Pagine Livello 1
  */
  ?>
 

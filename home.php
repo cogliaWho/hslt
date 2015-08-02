@@ -16,7 +16,7 @@ get_header(); ?>
         $args = array( 'numberposts' => '2' );
         $recent_posts = wp_get_recent_posts( $args );
         foreach( $recent_posts as $recent ){
-          $feat_image = wp_get_attachment_url( get_post_thumbnail_id($recent->ID) );
+          $feat_image = wp_get_attachment_url( get_post_thumbnail_id($recent["ID"]) );
       ?>
         <div class="hp-news-box">
           <a href="<?php echo get_permalink($recent["ID"]); ?>">

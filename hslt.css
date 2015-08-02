@@ -1233,6 +1233,55 @@ body, html {
   height: 120px;
   background-color: #6369b2;
   cursor: pointer; }
+  .hp-custom-box a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -ms-justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    align-items: center; }
+
+.customBox-txtWimg {
+  width: 50%; }
+  .customBox-txtWimg p {
+    word-wrap: break-word; }
+
+.customBox-txtOnly {
+  width: 100%;
+  text-align: center; }
+  .customBox-txtOnly p {
+    word-wrap: break-word; }
+
+.customBox-imgWtxt {
+  height: 100%;
+  width: 50%;
+  overflow: hidden; }
+  .customBox-imgWtxt img {
+    max-width: 100%; }
+
+.customBox-imgOnly {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  overflow: hidden; }
+  .customBox-imgOnly img {
+    max-width: 100%; }
+
+.hp-custom-box .customBox-hide {
+  display: none; }
 
 .hp-custom-box:first-child {
   margin-bottom: 15px;
